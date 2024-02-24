@@ -38,7 +38,7 @@
     margin-bottom: 25px;
 }
 input{
-    flex: 1;
+    flex: 1; /*It will take full length*/
     border: none;
     outline: none;
     background: transparent;
@@ -63,6 +63,7 @@ ul li{
     position: relative;
 }
 
+/* psudo element before :: */
 ul li::before{
     content: '';
     position: absolute;
@@ -82,4 +83,21 @@ ul li.checked{
 }
 ul li.checked::before{
     background-image: url(images/checked.png);
+}
+
+/* After adding span element by JS */
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
 }
